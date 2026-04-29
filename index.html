@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Frontend Mentor | Article preview component</title>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-dark-grayish-blue-900: hsl(217, 19%, 35%);
+        --color-dark-blue-500: hsl(214, 17%, 51%);
+        --color-grayish-blue-400: hsl(212, 23%, 69%);
+        --color-light-grayish-blue-200: hsl(210, 46%, 95%);
+        --font-manrope: "Manrope", sans-serif;
+        --spacing-200: 1rem; /*16px*/
+        --spacing-300: 1.5rem; /*24px*/
+        --spacing-400: 2rem; /*32px*/
+        --spacing-500: 2.5rem; /*40px*/
+        --spacing-600: 3rem; /*48px*/
+        --spacing-700: 3.5rem; /*56px*/
+        --spacing-800: 4rem; /*64px*/
+        --spacing-1300: 6.5rem; /*104px*/
+        --spacing-2000: 10rem; /*160px*/
+      }
+      .text-preset-1 {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 130%;
+        letter-spacing: 0.25px;
+      }
+      .text-preset-2-medium {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 140%;
+        letter-spacing: 0.12%;
+      }
+      .text-preset-2-bold {
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 140%;
+        letter-spacing: 0.12%;
+      }
+      .text-preset-3 {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 140%;
+        letter-spacing: 25%;
+      }
+      body {
+        font-family: var(--font-manrope);
+        background-color: var(--color-light-grayish-blue-200);
+        font-size: 13px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="flex min-h-screen items-center justify-center">
+      <article
+        class="m-auto mx-[24px] flex max-w-[327px] flex-col justify-center gap-400 overflow-hidden rounded-[10px] bg-white shadow-2xl"
+      >
+        <figure class="w-full">
+          <img
+            src="./images/drawers.jpg"
+            alt="Elegant wooden drawers with decorative items"
+            class="h-[200px] w-full object-cover"
+          />
+        </figure>
+
+        <div class="flex flex-col gap-600 px-[30px] pb-[18px]">
+          <section class="flex flex-col gap-300">
+            <h1 class="text-preset-1 text-dark-grayish-blue-900">
+              Shift the overall look and feel by adding these wonderful touches
+              to furniture in your home
+            </h1>
+            <p class="text-preset-2-medium text-dark-blue-500">
+              Ever been in a room and felt like something was missing? Perhaps
+              it felt slightly bare and uninviting. I’ve gotsome simple tips to
+              help you make any room feel complete.
+            </p>
+          </section>
+
+          <footer class="flex flex-row justify-center gap-800">
+            <div class="flex flex-row gap-200">
+              <img
+                src="./images/avatar-michelle.jpg"
+                alt="Michelle Appleton"
+                class="h-[40px] w-[40px] rounded-full"
+              />
+              <div>
+                <p class="text-preset-2-bold text-dark-grayish-blue-900">
+                  Michelle Appleton
+                </p>
+                <time
+                  datetime="2020-06-28"
+                  class="text-preset-2-medium text-grayish-blue-400"
+                  >28 Jun 2020</time
+                >
+              </div>
+            </div>
+            <button
+              aria-label="Share this article"
+              aria-expanded="false"
+              aria-controls="share-menu"
+              class="bg-light-grayish-blue-200 flex h-[32px] w-[32px] items-center justify-center rounded-full"
+            >
+              <img src="./images/icon-share.svg" alt="" class="" />
+            </button>
+          </footer>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
