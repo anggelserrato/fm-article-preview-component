@@ -36,26 +36,26 @@
       }
       .text-preset-1 {
         font-weight: 700;
-        font-size: 20px;
-        line-height: 130%;
+        font-size: 1.25rem;
+        line-height: 1.3;
         letter-spacing: 0.25px;
       }
       .text-preset-2-medium {
         font-weight: 500;
-        font-size: 13px;
-        line-height: 140%;
-        letter-spacing: 0.12%;
+        font-size: 0.8125rem;
+        line-height: 1.4;
+        letter-spacing: 0.16%;
       }
       .text-preset-2-bold {
         font-weight: 700;
-        font-size: 13px;
-        line-height: 140%;
+        font-size: 0.8125rem;
+        line-height: 1.4;
         letter-spacing: 0.12%;
       }
       .text-preset-3 {
         font-weight: 400;
-        font-size: 13px;
-        line-height: 140%;
+        font-size: 0.8125rem;
+        line-height: 1.4;
         letter-spacing: 25%;
       }
       body {
@@ -69,17 +69,22 @@
   <body>
     <main class="flex min-h-screen items-center justify-center">
       <article
-        class="m-auto mx-[24px] flex max-w-[327px] flex-col justify-center gap-400 overflow-hidden rounded-[10px] bg-white shadow-2xl"
+        class="mx-[24px] my-auto flex w-[90%] max-w-[730px] flex-col justify-center gap-400 overflow-hidden rounded-[10px] bg-white shadow-2xl md:w-[80%] md:max-w-[730px] md:flex-row"
       >
-        <figure class="w-full">
+        <figure class="md:w-2/5">
           <img
             src="./images/drawers.jpg"
             alt="Elegant wooden drawers with decorative items"
-            class="h-[200px] w-full object-cover"
+            width="660"
+            height="528"
+            loading="eager"
+            class="h-[200px] w-full object-cover md:h-full md:object-bottom-left"
           />
         </figure>
 
-        <div class="flex flex-col gap-600 px-[30px] pb-[18px]">
+        <div
+          class="flex flex-1 flex-col justify-center gap-600 px-[30px] pb-[18px] md:m-0 md:gap-300 md:py-500 md:pr-500 md:pl-0"
+        >
           <section class="flex flex-col gap-300">
             <h1 class="text-preset-1 text-dark-grayish-blue-900">
               Shift the overall look and feel by adding these wonderful touches
@@ -87,13 +92,13 @@
             </h1>
             <p class="text-preset-2-medium text-dark-blue-500">
               Ever been in a room and felt like something was missing? Perhaps
-              it felt slightly bare and uninviting. I’ve gotsome simple tips to
+              it felt slightly bare and uninviting. I’ve got some simple tips to
               help you make any room feel complete.
             </p>
           </section>
 
-          <footer class="flex flex-row justify-center gap-800">
-            <div class="flex flex-row gap-200">
+          <footer class="flex flex-row items-center justify-between md:gap-0">
+            <div class="flex flex-row items-center gap-200">
               <img
                 src="./images/avatar-michelle.jpg"
                 alt="Michelle Appleton"
@@ -110,13 +115,19 @@
                 >
               </div>
             </div>
+            <div id="share-menu" class="absolute hidden"></div>
             <button
               aria-label="Share this article"
               aria-expanded="false"
               aria-controls="share-menu"
-              class="bg-light-grayish-blue-200 flex h-[32px] w-[32px] items-center justify-center rounded-full"
+              class="bg-light-grayish-blue-200 group hover:bg-dark-blue-500 flex h-[32px] w-[32px] cursor-pointer items-center justify-center rounded-full transition-colors duration-200"
             >
-              <img src="./images/icon-share.svg" alt="" class="" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+                <path
+                  class="fill-dark-blue-500 transition-colors duration-200 group-hover:fill-white"
+                  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+                />
+              </svg>
             </button>
           </footer>
         </div>
