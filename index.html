@@ -83,7 +83,7 @@
         </figure>
 
         <div
-          class="flex flex-1 flex-col justify-center gap-600 px-[30px] pb-[18px] md:m-0 md:gap-300 md:py-500 md:pr-500 md:pl-0"
+          class="relative flex flex-1 flex-col justify-center gap-600 px-[30px] pb-[18px] md:m-0 md:gap-300 md:py-500 md:pr-500 md:pl-0"
         >
           <div class="flex flex-col gap-300">
             <h1 class="text-preset-1 text-dark-grayish-blue-900">
@@ -117,18 +117,11 @@
               </div>
             </div>
 
-            <div id="share-menu" class="hidden">
-              <p>SHARE</p>
-              <img src="./images/icon-facebook.svg" alt="Share on Facebook" />
-              <img src="./images/icon-twitter.svg" alt="Share on Twitter" />
-              <img src="./images/icon-pinterest.svg" alt="Share on Pinterest" />
-            </div>
-
             <button
               aria-label="Share this article"
               aria-expanded="false"
-              aria-controls="share-menu"
-              class="bg-light-grayish-blue-200 group hover:bg-dark-blue-500 flex h-[32px] w-[32px] cursor-pointer items-center justify-center rounded-full transition-colors duration-200"
+              aria-controls="share-toast"
+              class="bg-light-grayish-blue-200 group hover:bg-dark-blue-500 flex h-[32px] w-[32px] cursor-pointer items-center justify-center rounded-full"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
                 <path
@@ -137,9 +130,43 @@
                 />
               </svg>
             </button>
+
+            <div
+              id="share-toast"
+              class="bg-dark-grayish-blue-900 absolute bottom-0 left-0 flex hidden h-[76px] w-full items-center justify-between gap-300 px-[30px] transition-colors duration-200 md:hidden"
+            >
+              <div class="flex gap-200">
+                <p
+                  class="text-preset-3 text-grayish-blue-400 mr-200 text-white"
+                >
+                  SHARE
+                </p>
+                <img src="./images/icon-facebook.svg" alt="Share on Facebook" />
+                <img src="./images/icon-twitter.svg" alt="Share on Twitter" />
+                <img
+                  src="./images/icon-pinterest.svg"
+                  alt="Share on Pinterest"
+                />
+              </div>
+              <button
+                aria-label="Share this article"
+                aria-expanded="false"
+                aria-controls="share-toast"
+                class="bg-light-grayish-blue-200 group hover:bg-dark-blue-500 flex h-[32px] w-[32px] cursor-pointer items-center justify-center rounded-full transition-colors duration-200"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+                  <path
+                    class="fill-dark-blue-500 transition-colors duration-200 group-hover:fill-white"
+                    d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+                  />
+                </svg>
+              </button>
+            </div>
           </footer>
         </div>
       </article>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
