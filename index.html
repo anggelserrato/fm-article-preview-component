@@ -85,7 +85,7 @@
         <div
           class="flex flex-1 flex-col justify-center gap-600 px-[30px] pb-[18px] md:m-0 md:gap-300 md:py-500 md:pr-500 md:pl-0"
         >
-          <section class="flex flex-col gap-300">
+          <div class="flex flex-col gap-300">
             <h1 class="text-preset-1 text-dark-grayish-blue-900">
               Shift the overall look and feel by adding these wonderful touches
               to furniture in your home
@@ -95,15 +95,16 @@
               it felt slightly bare and uninviting. I’ve got some simple tips to
               help you make any room feel complete.
             </p>
-          </section>
+          </div>
 
-          <footer class="flex flex-row items-center justify-between md:gap-0">
-            <div class="flex flex-row items-center gap-200">
+          <footer class="flex items-center justify-between">
+            <div class="flex gap-200">
               <img
                 src="./images/avatar-michelle.jpg"
                 alt="Michelle Appleton"
                 class="h-[40px] w-[40px] rounded-full"
               />
+
               <div>
                 <p class="text-preset-2-bold text-dark-grayish-blue-900">
                   Michelle Appleton
@@ -115,7 +116,14 @@
                 >
               </div>
             </div>
-            <div id="share-menu" class="absolute hidden"></div>
+
+            <div id="share-menu" class="hidden">
+              <p>SHARE</p>
+              <img src="./images/icon-facebook.svg" alt="Share on Facebook" />
+              <img src="./images/icon-twitter.svg" alt="Share on Twitter" />
+              <img src="./images/icon-pinterest.svg" alt="Share on Pinterest" />
+            </div>
+
             <button
               aria-label="Share this article"
               aria-expanded="false"
