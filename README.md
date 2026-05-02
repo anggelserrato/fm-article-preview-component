@@ -24,6 +24,8 @@ Users should be able to:
 
 ### Screenshot
 
+<img width="1920" height="1440" alt="article-preview-component-shots" src="https://github.com/user-attachments/assets/b5134094-806f-4b66-aa07-098eff0d0a8a" />
+
 ### Links
 
 - Solution URL: [View Code](https://github.com/anggelserrato/fm-article-preview-component)
