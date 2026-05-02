@@ -63,15 +63,21 @@
         background-color: var(--color-light-grayish-blue-200);
         font-size: 13px;
       }
+      #share-toast:not(.hidden) ~ .share-btn {
+        background-color: var(--color-dark-blue-500);
+      }
+      #share-toast:not(.hidden) ~ .share-btn path {
+        fill: white;
+      }
     </style>
   </head>
 
   <body>
     <main class="flex min-h-screen items-center justify-center">
       <article
-        class="mx-[24px] my-auto flex w-[90%] max-w-[730px] flex-col justify-center gap-400 overflow-hidden rounded-[10px] bg-white shadow-2xl md:w-[80%] md:max-w-[730px] md:flex-row"
+        class="mx-[24px] my-auto flex w-[90%] max-w-[730px] flex-col justify-center gap-400 overflow-hidden rounded-[10px] bg-white shadow-2xl md:w-[80%] md:max-w-[730px] md:flex-row md:overflow-visible"
       >
-        <figure class="md:w-2/5">
+        <figure class="md:w-2/5 md:overflow-hidden md:rounded-l-[10px]">
           <img
             src="./images/drawers.jpg"
             alt="Elegant wooden drawers with decorative items"
@@ -97,7 +103,7 @@
             </p>
           </div>
 
-          <footer class="flex items-center justify-between">
+          <footer class="flex items-center justify-between md:relative">
             <div class="flex gap-200">
               <img
                 src="./images/avatar-michelle.jpg"
@@ -117,23 +123,9 @@
               </div>
             </div>
 
-            <button
-              aria-label="Share this article"
-              aria-expanded="false"
-              aria-controls="share-toast"
-              class="bg-light-grayish-blue-200 group hover:bg-dark-blue-500 flex h-[32px] w-[32px] cursor-pointer items-center justify-center rounded-full"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
-                <path
-                  class="fill-dark-blue-500 transition-colors duration-200 group-hover:fill-white"
-                  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
-                />
-              </svg>
-            </button>
-
             <div
               id="share-toast"
-              class="bg-dark-grayish-blue-900 absolute bottom-0 left-0 flex hidden h-[76px] w-full items-center justify-between gap-300 px-[30px] transition-colors duration-200"
+              class="bg-dark-grayish-blue-900 absolute bottom-0 left-0 flex hidden h-[76px] w-full items-center justify-between gap-300 px-[30px] transition-colors duration-200 md:right-[-108px] md:bottom-[160%] md:left-auto md:h-[55px] md:w-[248px] md:justify-center md:rounded-[10px] md:px-500 md:shadow-2xl"
             >
               <div class="flex gap-200">
                 <p class="text-preset-3 text-grayish-blue-400 mr-200">SHARE</p>
@@ -157,7 +149,7 @@
                 aria-label="Share this article"
                 aria-expanded="false"
                 aria-controls="share-toast"
-                class="bg-dark-blue-500 group hover:bg-light-grayish-blue-200 flex h-[32px] w-[32px] cursor-pointer items-center justify-center rounded-full transition-colors duration-200"
+                class="bg-dark-blue-500 group hover:bg-light-grayish-blue-200 flex h-[32px] w-[32px] cursor-pointer items-center justify-center rounded-full transition-colors duration-200 md:hidden"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
                   <path
@@ -166,7 +158,25 @@
                   />
                 </svg>
               </button>
+
+              <div
+                class="border-t-dark-grayish-blue-900 absolute top-full right-[114px] hidden h-0 w-0 border-t-[12px] border-r-[10px] border-l-[10px] border-r-transparent border-l-transparent md:block"
+              ></div>
             </div>
+
+            <button
+              aria-label="Share this article"
+              aria-expanded="false"
+              aria-controls="share-toast"
+              class="share-btn bg-light-grayish-blue-200 group hover:bg-dark-blue-500 flex h-[32px] w-[32px] cursor-pointer items-center justify-center rounded-full transition-colors duration-200"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+                <path
+                  class="fill-dark-blue-500 transition-colors duration-200 group-hover:fill-white"
+                  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+                />
+              </svg>
+            </button>
           </footer>
         </div>
       </article>
